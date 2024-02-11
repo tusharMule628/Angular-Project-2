@@ -1,0 +1,22 @@
+<form [formGroup]="myform" (ngSubmit)="handleSubmit()">
+
+    <label for="uName">Enter Your Name</label>
+    <input type="text" formControlName="userName" id="uName">
+    <span [ngClass]="'error'" *ngIf="userName.invalid">Name Should Not Empty</span><br><br>
+
+    <label for="age">Enter Your Age</label>
+    <input type="number" formControlName="userAge" id="age">
+    <span [ngClass]="'error'" *ngIf="age.errors?.required">Age Should Not Empty</span>
+    <span [ngClass]="'error'" *ngIf="age.errors?.min">Age Should not be less than 0</span>
+    <span [ngClass]="'error'" *ngIf="age.errors?.max">Age Should not be greater than 100</span><br><br>
+
+    <label for="pswd">Enter Your Password</label>
+    <input type="password" formControlName="userPass" id="pswd">
+    <span [ngClass]="'error'" *ngIf="password.errors?.required"> Password Should Not Empty</span>
+    <span [ngClass]="'error'" *ngIf="password.errors?.minlength"> Password Should have minimum 8 characters</span>
+    <span [ngClass]="'error'" *ngIf="password.errors?.maxlength"> Password Should have maximum 20 characters</span><br><br>
+
+    <input type="submit" name="" id="" value="check the validation">
+
+</form>
+<h1>{{myform.valid|json}}</h1>
