@@ -1,0 +1,13 @@
+<!-- <p>two-way-binding-syntax works!</p>
+<input type="text" id="select" name="" placeholder="Name" [(ngModel) ]="variableName"> -->
+
+<label for="Bikes"> <h1>Choose Bike</h1></label>
+<select name="Bikes" id="Bikes" [(ngModel)]="variableName">
+    <option value="./assets/classic-350.webp"> <h3>Classic 350</h3></option>
+    <option value="./assets/hunter-350.webp"> <h3>Royal Enfield Hunter 350</h3></option>
+    <option value="./assets/interceptor.webp"> <h3>Royal Enfield Interceptor 650</h3></option>
+    <option value="./assets/Royal-Enfield-Himalaya.webp"> <h3>Royal Enfield Himalaya</h3></option>
+</select>
+
+<!-- <h1>{{variableName}}</h1> -->
+    <img src={{variableName}} width="1300" height="720" alt="">
